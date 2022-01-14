@@ -1,20 +1,29 @@
 {
-    "name": "tural/epoint",
-    "type": "library",
-    "require": {
-        "php-http/guzzle6-adapter": "1.1"
-    },
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Tural\\Epoint\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Tural",
-            "email": "tural.esger@gmail.com"
-        }
-    ],
-    "minimum-stability": "stable"
+  "name": "tural/epoint",
+  "type": "library",
+  "description": "The library provides convenient access to the Epoint API from applications written in the PHP language. It includes a pre-defined set of static class functions for API resources that initialize themselves dynamically from Tural/Epoint class which makes it easier without writing repetitive configuration.",
+  "keywords": [
+    "epoint",
+    "epoint.az",
+    "epoint library",
+    "epoint api",
+    "epoint client"
+  ],
+  "require": {
+    "php": ">=7.0.0",
+    "php-http/guzzle6-adapter": "1.1"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Tural\\Epoint\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Tural",
+      "email": "tural.esger@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable"
 }

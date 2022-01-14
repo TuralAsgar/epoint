@@ -1,6 +1,6 @@
 # Tural/Epoint library/SDK
 
-The library provides convenient access to the Epoint API from applications written in the PHP language. It includes a pre-defined set of static class functions for API resources that initialize themselves dynamically from Tural/Epoint class
+The library provides convenient access to the [Epoint API](https://epoint.az) from applications written in the PHP language. It includes a pre-defined set of static class functions for API resources that initialize themselves dynamically from Tural/Epoint class
 which makes it easier without writing repetitive configuration.
 
 ## Requirements
