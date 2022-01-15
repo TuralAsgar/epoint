@@ -194,3 +194,4 @@ if (!empty($data)) {
 
 All the parameters of the class are inline-documented inside class.
 
+You can have a look at Api documentation in Azerbaijani [here](https://github.com/tural-esger/epoint/blob/master/Epoint%20API%20Documentation%20az.pdf), or [download](https://github.com/tural-esger/epoint/raw/master/Epoint%20API%20Documentation%20az.pdf).
