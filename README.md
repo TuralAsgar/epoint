@@ -192,4 +192,5 @@ if (!empty($data)) {
 }
 ```
 
-Parameters of class are documented inside class.
+All the parameters of the class are inline-documented inside class.
+
