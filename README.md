@@ -16,7 +16,7 @@ composer require tural/epoint
 To include use Composer's [autoload](https://getcomposer.org/doc/01-basic-usage.md#autoloading):
 
 ```php
-require_once('vendor/autoload.php');
+require_once("vendor/autoload.php");
 ```
 
 ## Dependencies
@@ -28,9 +28,9 @@ require_once('vendor/autoload.php');
 ### Payment by typing card number
 
 ```php
-$response = Epoint::typeCard(PRIVATE_KEY, PUBLIC_KEY, "your_order_id", '0.01', 'Test payment');
+$response = Epoint::typeCard(PRIVATE_KEY, PUBLIC_KEY, "your_order_id", "0.01", "Test payment");
 
-if ($response->status == 'success') {
+if ($response->status == "success") {
 
     // if successful it redirects to bank's payment page,
     // when user pays successfully, epoint will call the success webhook you provided
@@ -48,7 +48,7 @@ if ($response->status == 'success') {
 ```php
 $response = Epoint::cancel("write epoint transaction id");
 
-if ($response->status == 'success') {
+if ($response->status == "success") {
 
     // handle success
     
@@ -77,7 +77,7 @@ dd($response);
 ```php
 $response = Epoint::saveCardForPayment("Kartı yadda saxla");
 
-if ($response->status == 'success') {
+if ($response->status == "success") {
 
     // save it to db
     $card_uid=$response->card_id;
@@ -96,7 +96,7 @@ if ($response->status == 'success') {
 ```php
 $response = Epoint::saveCardForRefund("Kartı yadda saxla");
 
-if ($response->status == 'success') {
+if ($response->status == "success") {
 
     // save it to db
     $card_uid = $response->card_id;
@@ -113,9 +113,9 @@ if ($response->status == 'success') {
 
 ```php
 // if successful it returns success
-$response = Epoint::payWithSaved("card_uid", 'order_id', 'amount for ex. 0.01', 'write description');
+$response = Epoint::payWithSaved("card_uid", "order_id", "amount for ex. 0.01", "write description");
 
-if ($response->status == 'success') {
+if ($response->status == "success") {
 
     $epoint_transaction = $response->transaction;
     $bank_transaction = $response->bank_transaction;
@@ -130,9 +130,9 @@ if ($response->status == 'success') {
 ### Refund action
 
 ```php
-$response = Epoint::refund("card_uid", 'order_id', 'amount 0.05', 'write description');
+$response = Epoint::refund("card_uid", "order_id", "amount 0.05", "write description");
 
-if ($response->status == 'success') {
+if ($response->status == "success") {
 
     // handle success
     $this->redirect($response->redirect_url, true);
@@ -148,7 +148,7 @@ if ($response->status == 'success') {
 
 ```php
 
-$data = $this->req('data');
+$data = $this->req("data");
 
 if (!empty($data)) {
 
@@ -178,7 +178,7 @@ if (!empty($data)) {
         $json_string ?? null;
 
         // if payment is successful
-        if ($json->status == 'success') {
+        if ($json->status == "success") {
 
             // if card_id is set it means it is save_card response
             if (!empty($json->card_id)) {
